@@ -1,8 +1,12 @@
 # combinadics-fast
 
-This package encodes and decodes the [Macaulay representation](https://en.wikipedia.org/wiki/Macaulay_representation_of_an_integer) of a k-combination.
+The Macaulay representation is a bijection between natural numbers and combinations. It's slow to compute though, and requires computing lots of big factorials.
 
-It is useful for selecting distinct samples from a population.
+This package quickly encodes and decodes the [Macaulay representation](https://en.wikipedia.org/wiki/Macaulay_representation_of_an_integer) of a k-combination, by avoiding expensive factorials.
+
+This is the only implementation I found that works for very very big values of k and n. It uses numeric approximations of factorials in a way that hopefully doesn't cause any inaccuracy in the final result.
+
+It is useful for selecting big distinct samples from a big population.
 
 ## Install
 
